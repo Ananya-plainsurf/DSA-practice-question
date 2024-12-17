@@ -23,3 +23,4 @@ const kadanesAlgo = (nums) => {
   return { maxSum, subArry: nums.slice(subStr.start, subStr.end + 1) };
 };
 console.log(kadanesAlgo([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+console.log(kadanesAlgo([-2, -4]));
