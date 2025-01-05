@@ -14,17 +14,32 @@ const sortArr = (arr) => {
   //   return arr;
 
   // selection sort
-  let n = arr.length;
-  for (let i = 0; i < n - 1; i++) {
-    let minId = i;
-    for (let j = i + 1; j < n; j++) {
-      if (arr[j] < arr[minId]) {
-        minId = j;
-      }
+  //   let n = arr.length;
+  //   for (let i = 0; i < n - 1; i++) {
+  //     let minId = i;
+  //     for (let j = i + 1; j < n; j++) {
+  //       if (arr[j] < arr[minId]) {
+  //         minId = j;
+  //       }
+  //     }
+  //     if (minId !== i) {
+  //       [arr[i], arr[minId]] = [arr[minId], arr[i]];
+  //     }
+  //   }
+  //   return arr;
+
+  // insertion sort
+
+  const n = arr.length;
+
+  for (let i = 0; i < n; i++) {
+    const key = arr[i];
+    let j = i - 1;
+    while (j >= 0 && arr[j] > key) {
+      arr[j + 1] = arr[j];
+      j--;
     }
-    if (minId !== i) {
-      [arr[i], arr[minId]] = [arr[minId], arr[i]];
-    }
+    arr[j + 1] = key;
   }
   return arr;
 };
